@@ -11,7 +11,7 @@ const stoppingPoint = 500;
 window.addEventListener('scroll', () => {
     let value = window.scrollY;
 
-    flower.style.left = value * -0.6 + 'px';
+    flower.style.left = value * -0.3 + 'px';
     flower.style.top = value * -0.3 + 'px';
     mtfuji.style.top = value * -0.5 + 'px';
 
