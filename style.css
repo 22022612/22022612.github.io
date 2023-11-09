@@ -10,7 +10,7 @@
 body {
     background: #f9f9f9;
     min-height: 100vh;
-    /* overflow-x: hidden; */
+    
 }
 
 header {
@@ -74,6 +74,7 @@ header {
     height: 115vh;
     background: #A4D8D8;
     padding: 100px;
+    display: flex;
 }
 
 .about {
@@ -91,6 +92,7 @@ header {
     font-size: 1em;
     color: #fff;
     font-weight: 300;
+    line-height: 24px;
 }
 
 #flower {
@@ -100,6 +102,57 @@ header {
 #mtfuji {
     margin-top: 140px;
 }
+
+#bruh {
+    width: 10%;
+    border-radius: 3rem;
+    height: auto;
+    min-width: 30vw;
+    border: 20px solid white;
+}
+
+
+/* Styles for the skills section */
+.skills {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 15px;
+    background-color: #8ebfbf;
+    padding: 15px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skills li:hover {
+    transform: scale(1.05);
+}
+
+.skills li span {
+    font-weight: bold;
+    color: #fff; 
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -191,11 +244,12 @@ h5{
 .contact {
     width: 100%;
     overflow: hidden;
-    background-color: #fff;
+    background-color: #ffffff; 
+    display: flex;
 }
 
 .contact .container {
-    height: 100vh;
+    height: 90vh;
     min-height: 700px;
     display: grid;
     grid-template-columns: 1fr;
@@ -217,6 +271,13 @@ h5{
     align-items: center;
     position: relative;
     z-index: 3;
+}
+
+#me2 {
+    width: 70%;
+    margin-left: 300px;
+    border-radius: 20px;
+    border: #A4D8D8 solid 12px;
 }
 
 .contact-heading h1{
@@ -249,6 +310,7 @@ h5{
 
 .form-wrapper {
     max-width: 32rem;
+    margin-left: 100px;
 }
 
 .contact-form {
