@@ -18,14 +18,14 @@
   <header>
     <h2 class="logo">Logo</h2>
     <nav class="navigation">
-      <a href="#" class="active">Home</a>
-      <a href="#">About</a>
-      <a href="#">Portfolio</a>
+      <a href="#parallax" class="active">Home</a>
+      <a href="#sec">About</a>
+      <a href="#portfolio">Portfolio</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="parallax">
+  <section class="parallax" id="parallax">
     <img src="Images/bg.png" id="bg">
     <img src="Images/fuji.png" id="mtfuji">
     <img src="Images/grassbg.png" id="grassbg">
@@ -35,7 +35,7 @@
     <img src="Images/flowaa.png" id="flower">
   </section>
 
-  <section class="sec" style="text-align: center;">
+  <section class="sec" id="sec" style="text-align: center;">
     <div>
       <h2>Parallax Scrolling Website</h2>
       <p>
@@ -55,7 +55,7 @@
       <div class="skills">
         <ul>
           <li><span>Front end</span>HTML, CSS, Javascript, Bootstrap 5</li>
-          <li><span>Backend</span>PHP, Java</li>
+          <li><span>Backend</span>PHP, Java, Python</li>
           <li><span>Design and creatives</span>Adobe XD, Photoshop and Illustrator</li>
         </ul>
       </div>
@@ -69,7 +69,7 @@
 
 
 
-  <div class="portfolio">
+  <div class="portfolio" id="portfolio">
     <div class="row">
       <div class="col">
         <h1>My Works</h1>
@@ -108,9 +108,11 @@
   </div>
 
 
-  <main>
-    <section class="contact" id="contact">
+  <main id="contact">
+    <div class="black-bar"></div>
+    <section class="contact">
       <div class="container">
+        
         <div class="left">
           <div class="form-wrapper">
             <div class="contact-heading">
@@ -162,6 +164,46 @@
     </section>
   </main>
 
+
+  <footer>
+    <div class="rows">
+      <div class="col3">
+        <img src="Images/" class="footerlogo">
+        <p>bruh yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap
+          yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap
+          yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap
+          yap yap</p>
+      </div>
+      <div class="col3">
+        <h3>Contact Me <div class="underline"><span></span></div>
+        </h3>
+        <p>+65 8818 0178</p>
+        <p class="email-id">22022612@gmail.com</p>
+        <h4>+65 8818 0178</h4>
+      </div>
+      <div class="col3">
+        <h3>Links <div class="underline"><span></span></div>
+        </h3>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About Me</a></li>
+          <li><a href="">Portfolio</a></li>
+          <li><a href="">Contacts</a></li>
+        </ul>
+      </div>
+      <div class="col3">
+        <h3>My Socials <div class="underline"><span></span></div>
+        </h3>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-github"></i>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">©</p>
+  </footer>
 
 
   <script src="app.js"></script>
