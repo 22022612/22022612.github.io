@@ -211,7 +211,7 @@ button{
     background-image: url(Images/flowa.png);
 }
 .card2 {
-    background-image: url(Images/);
+    background-image: url(Images/Poster.png);
 }
 .card3 {
     background-image: url(Images/);
@@ -500,7 +500,7 @@ footer {
     width: 100%;
     position: relative;
     bottom: 0;
-    background: linear-gradient(to right,#00093c, #2d0b00);
+    background: linear-gradient(to bottom,#739e9e, #64c0c0);
     color: #ffffff;
     padding: 100px 0 30px;
     border-top-left-radius: 125px;
