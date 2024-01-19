@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="workStyles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<header>
+    <h2 class="logo">Logo</h2>
+    <nav class="navigation">
+        <a onclick="goToHome()">Home</a>
+        <a onclick="goToSec()">About</a>
+        <a onclick="goToPortfolio()" class="active">Portfolio</a>
+        <a href="contactus.html">Contact</a>
+    </nav>
+</header>
+<section class="main-wrap">
+    <div class="product">
+        <div class="image-gallery">
+            <img src="Images/coding3.png" id="productImg" alt="">
+        </div>
+        <div class="product-details">
+            <div class="details">
+                <h2>Personal Portfolio Website</h2>
+                <h3>Skills used:</h3>
+                <h4>Photoshop, HTML and CSS</h4>
+                <p>For this, I made a personal portfolio website</p>
+                <p>
+                    For this website, it features a parallax intro, a portfolio page, an about me page, and a contact us
+                    page. </p>
+                <p>All the features were made by me including the parallax website where a image was manually
+                    edited in photoshop and made possible with javascript and css.</p>
+                <p>Also, for the website i used
+                    javascript to make a custom cursor.
+                </p>
+                <p>
+                    This project was made to showcase my proficency in Photoshop, Html and css.
+                    <br>
+                    <a href="https://22022612.github.io" target="_blank">Visit the Website</a>
+                </p>
+                <div class="sub-btn">
+                    <button class="return" onclick="goToPortfolio()">
+                        Back to portfolio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+
+</body>
+<script src="cursor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var contentAnimation = anime({
+            targets: 'p',
+            opacity: [0, 1],
+            translateX: ['-50px', '0px'],
+            easing: 'easeInOutQuad',
+            duration: 1000,
+            delay: anime.stagger(100)
+        });
+
+    });
+    function goToPortfolio() {
+        window.location.href = "portfolio.html";
+    }
+    function goToHome() {
+        window.location.href = "index.html#parallax";
+    }
+    function goToSec() {
+        window.location.href = "index.html#sec";
+    }
+</script>
+
+</html>

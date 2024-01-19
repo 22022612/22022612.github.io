@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      cursor: none;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px 100px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 2em;
+      color: #000000;
+      pointer-events: none;
+      margin-right: 270px;
+      font-weight: bold;
+    }
+
+    .navigation a {
+      text-decoration: none;
+      color: #000;
+      padding: 6px 15px;
+      border-radius: 20px;
+      margin: 0 10px;
+      font-weight: 600;
+    }
+
+    .navigation a:hover,
+    .navigation a.active {
+      background-color: grey;
+      color: black;
+    }
+
+    h2,
+    h3 {
+      font-weight: 400;
+    }
+
+    h2 {
+      margin: 10px 20px;
+      font-size: 28px;
+      letter-spacing: 1px;
+      border-bottom: 2px solid;
+      display: inline;
+    }
+
+    .container {
+      max-width: 880px;
+      width: 100%;
+      margin: 50px auto;
+    }
+
+    .row {
+      display: flex;
+      border-radius: 10px;
+      margin-top: 20px;
+      overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 6px;
+    }
+
+    .box {
+      width: 33.3%;
+      height: 300px;
+      transition: width 1s;
+      margin-top: auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .box:hover {
+      width: 66%;
+    }
+
+    .box h3,
+    i {
+      font-family: Karla;
+      position: absolute;
+      color: #fff;
+      margin: 10px;
+      z-index: 1;
+    }
+
+    .box i {
+      visibility: hidden;
+      right: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .box:hover i {
+      visibility: visible;
+      transition-delay: .6s;
+    }
+
+    .box img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      filter: brightness(70%);
+    }
+
+    @media (max-width: 540px) {
+      h2 {
+        font-size: 24px;
+      }
+
+      h3 {
+        font-size: 17px;
+      }
+    }
+
+    footer {
+      width: 100%;
+      position: relative;
+      bottom: 0;
+      background: linear-gradient(to bottom, #739e9e, #64c0c0);
+      color: #ffffff;
+      padding: 100px 0 30px;
+      border-top-left-radius: 125px;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    .rows {
+      width: 85%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .col3 {
+      flex-basis: 25%;
+      padding: 10px;
+    }
+
+    .col3:nth-child(2),
+    .col3:nth-child(3) {
+      flex-basis: 15%;
+    }
+
+    .footerlogo {
+      width: 80px;
+      margin-bottom: 30px;
+
+    }
+
+    .col3 h3 {
+      width: fit-content;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .email-id {
+      width: fit-content;
+      border-bottom: 1px solid #ccc;
+      margin: 20px 0;
+    }
+
+    ul li {
+      list-style: none;
+      margin-bottom: 12px;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .social-icons .fa-brands {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      color: #000;
+      background: #fff;
+      margin-right: 15px;
+
+    }
+
+    hr {
+      width: 90%;
+      border: 0;
+      border-bottom: 1px solid #ccc;
+      margin: 20px auto;
+    }
+
+    .copyright {
+      text-align: center;
+    }
+
+    .underline {
+      width: 100%;
+      height: 5px;
+      background: #767676;
+      border-radius: 3px;
+      position: absolute;
+      top: 25px;
+      left: 0;
+
+    }
+    .circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: black;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999; /* so that it stays on top of all other elements */
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Logo</div>
+    <nav class="navigation">
+      <a onclick="goToHome()">Home</a>
+      <a onclick="goToSec()">About</a>
+      <a onclick="goToPortfolio()" class="active">Portfolio</a>
+      <a href="contactus.html">Contact</a>
+    </nav>
+  </header>
+  <div class="designworks" style="padding-top: 30px;">
+    <div class="container">
+      <h2> Design Works </h2>
+      <div class="row">
+        <div class="box box1">
+          <h3> Chess Competition Poster </h3>
+          <i class="fa-solid fa-circle-chevron-right"></i>
+          <img src="Images/Poster.jpg" onclick="goToPoster()"/>
+        </div>
+
+        <div class="box box2">
+          <h3> Osaka Travel Magazine Poster </h3>
+          <i class="fa-solid fa-circle-chevron-right"></i>
+          <img src="Images/Poster 2.png" onclick="goToPoster2()"/>
+        </div>
+
+        <div class="box box3">
+          <h3> Music Festival Poster </h3>
+          <i class="fa-solid fa-circle-chevron-right"></i>
+          <img src="Images/Poster 3.png" onclick="goToPoster3()"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h2> More Design Works </h2>
+    <div class="row">
+      <div class="box box1">
+        <h3> Namecard Design </h3>
+        <i class="fa-solid fa-circle-chevron-right"></i>
+        <img src="Images/Poster3.png" onclick="goToPoster_3()"/>
+      </div>
+
+      <div class="box box2">
+        <h3> Website Template </h3>
+        <i class="fa-solid fa-circle-chevron-right"></i>
+        <img src="Images/website template.png" onclick="goToWebsite()" />
+      </div>
+
+      <div class="box box3">
+        <h3> Minds App </h3>
+        <i class="fa-solid fa-circle-chevron-right"></i>
+        <img src="Images/xd.png" onclick="goToxd()"/>
+      </div>
+    </div>
+  </div>
+  <div class="codingWorks">
+
+    <div class="container">
+      <h2> Coding Works </h2>
+      <div class="row">
+        <div class="box box1">
+          <h3> SOI website </h3>
+          <i class="fa-solid fa-circle-chevron-right"></i>
+          <img src="Images/coding2.png" onclick="goTocoding2()"/>
+        </div>
+
+        <div class="box box2">
+          <h3> Travel Website </h3>
+          <i class="fa-solid fa-circle-chevron-right"></i>
+          <img src="Images/coding1.png" onclick="goTocoding1()"/>
+        </div>
+
+        <div class="box box3">
+          <h3> Portfolio Website </h3>
+          <i class="fa-solid fa-circle-chevron-right"></i>
+          <img src="Images/coding3.png" onclick="goTocoding3()"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="UnityWorks">
+
+
+  </div>
+  <footer>
+    <div class="rows">
+      <div class="col3">
+        <img src="" class="footerlogo">
+        <p></p>
+      </div>
+      <div class="col3">
+        <h3>Contact Me <div class="underline"><span></span></div>
+        </h3>
+        <p>+65 8818 0178</p>
+        <p class="email-id">22022612@gmail.com</p>
+        <h4>+65 ---- ----</h4>
+      </div>
+      <div class="col3">
+        <h3>Links <div class="underline"><span></span></div>
+        </h3>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About Me</a></li>
+          <li><a href="">Portfolio</a></li>
+          <li><a href="">Contacts</a></li>
+        </ul>
+      </div>
+      <div class="col3">
+        <h3>My Socials <div class="underline"><span></span></div>
+        </h3>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-github"></i>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">©</p>
+  </footer>
+  <script>
+    function goToPortfolio() {
+      window.location.href = "portfolio.html";
+    }
+    function goToHome() {
+      window.location.href = "index.html#parallax";
+    }
+    function goToSec() {
+      window.location.href = "index.html#sec";
+    }
+    function goToPoster() {
+      window.location.href = "poster.html"
+    }
+    function goToPoster2(){
+      window.location.href = "poster2.html"
+    }
+    function goToPoster3(){
+      window.location.href = "poster3.html"
+    }
+    function goTocoding1() {
+      window.location.href = "coding1.html"
+    }
+    function goToxd() {
+      window.location.href = "xd.html"
+    }
+    function goTocoding2(){
+      window.location.href = "soi.html"
+    }
+    function goToWebsite(){
+      window.location.href = "website.html"
+    }
+    function goTocoding3(){
+      window.location.href = "portfolio1.html"
+    }
+    function goToPoster_3(){
+      window.location.href = "namecard.html"
+    }
+  </script>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+
+</body>
+<script src="cursor.js"></script>
+
+</html>

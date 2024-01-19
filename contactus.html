@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="index.html#parallax">Home</a>
+            <a href="index.html#sec">About</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#contact" class="active">Contact</a>
+        </nav>
+    </header>
+    <main id="contact">
+        <div class="black-bar"></div>
+        <section class="contact">
+            <div class="container">
+
+                <div class="left">
+                    <div class="form-wrapper">
+                        <div class="contact-heading">
+                            <h1>Contact me<span>,</span></h1>
+                            <p class="text">Or reach me via : <a href="mailto:22022612@myrp.edu.sg">
+                                    22022612@myrp.edu.sg</a></p>
+                        </div>
+
+                        <form action="" class="contact-form">
+                            <div class="input-wrap">
+                                <input class="contact-input" id="from_name" autocomplete="off" name="First Name" type="text" required>
+                                <label>First Name</label>
+                                <i class="icon fa-solid fa-address-card"></i>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input class="contact-input" autocomplete="off" name="Last Name" type="text" required>
+                                <label>Last Name</label>
+                                <i class="icon fa-solid fa-address-card"></i>
+                            </div>
+
+                            <div class="input-wrap w-100">
+                                <input class="contact-input" id="email" autocomplete="off" name="Email" type="email" required>
+                                <label>Email</label>
+                                <i class="icon fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div class="input-wrap textarea w-100">
+                                <textarea name="Message" id="message" autocomplete="off" class="contact-input"></textarea>
+                                <label>Message</label>
+                                <i class="icon fa-solid fa-inbox"></i>
+                            </div>
+                            <div class="contact-buttons">
+                                <button class="btn upload">
+                                    <span>
+                                        <i class="fa-solid fa-paperclip"></i> Add Attachment
+                                    </span>
+                                    <input type="file" name="attachment">
+                                </button>
+                                <input type="submit" id="submit" value="Send message" class="btn">
+                            </div>
+                        </form>
+                    </div>
+                    <img src="Images/me2.jpg" id="me2">
+                </div>
+                <div class="right">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="rows">
+            <div class="col3">
+                <img src="" class="footerlogo">
+                <p></p>
+            </div>
+            <div class="col3">
+                <h3>Contact Me <div class="underline"><span></span></div>
+                </h3>
+                <p>+65 8818 0178</p>
+                <p class="email-id">22022612@gmail.com</p>
+                <h4>+65 ---- ----</h4>
+            </div>
+            <div class="col3">
+                <h3>Links <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Me</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="col3">
+                <h3>My Socials <div class="underline"><span></span></div>
+                </h3>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">©</p>
+    </footer>
+
+    <cursor>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </cursor>
+
+
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+    <script src="cursor.js"></script>
+    <script>
+        function redirectToPoster() {
+            // Redirect the user to poster.html
+            window.location.href = "poster.html";
+        }
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("wweOBJogIvH0xrlPr");
+        })();
+
+        document.querySelector('.contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var params = {
+                from_name: document.getElementById('from_name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            emailjs.send('service_sdqkazx', 'template_vif06ej', params)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Your message has been sent! I will get back to you ASAP 😊');
+                }, function (error) {
+                    console.log('FAILED...', error);
+                });
+        });
+    </script>
+    <script src="" async defer></script>
+</body>
+
+</html>

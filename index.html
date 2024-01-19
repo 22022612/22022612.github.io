@@ -21,7 +21,7 @@
       <a href="#parallax" class="active">Home</a>
       <a href="#sec">About</a>
       <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
+      <a href="contactus.html">Contact</a>
     </nav>
   </header>
 
@@ -47,9 +47,9 @@
         journey in the
         world of design and development.
         <br><br>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed eos consequatur commodi
+        <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed eos consequatur commodi
         voluptatem eveniet doloribus nisi corrupti nam fugit in eius dolorum harum quam repudiandae,
-        ullam tenetur saepe possimus nulla! <br><br>
+        ullam tenetur saepe possimus nulla! <br><br> -->
 
       </p>
       <div class="skills">
@@ -66,53 +66,73 @@
     </div>
   </section>
 
-
-
-
-  <div class="portfolio" id="portfolio">
-    <div class="row">
-      <div class="col">
-        <h1>My Works</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed eos consequatur commodi
-          voluptatem eveniet doloribus nisi corrupti nam fugit in eius dolorum harum quam repudiandae,
-          ullam tenetur saepe possimus nulla!</p>
-        <button type="button">Explore</button>
-      </div>
-      <div class="col">
-        <div class="card card1">
-          <h5>Work 1</h5>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed eos consequatur commodi
-            voluptatem eveniet doloribus nisi corrupti nam fugit in eius dolorum harum quam repudiandae,
-            ullam tenetur saepe possimus nulla!</p>
-        </div>
-        <div class="card card2">
-          <h5>Work 2</h5>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed eos consequatur commodi
-            voluptatem eveniet doloribus nisi corrupti nam fugit in eius dolorum harum quam repudiandae,
-            ullam tenetur saepe possimus nulla!</p>
-        </div>
-        <div class="card card3">
-          <h5>Work 3</h5>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed eos consequatur commodi
-            voluptatem eveniet doloribus nisi corrupti nam fugit in eius dolorum harum quam repudiandae,
-            ullam tenetur saepe possimus nulla!</p>
-        </div>
-        <div class="card card4">
-          <h5>Work 4</h5>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed eos consequatur commodi
-            voluptatem eveniet doloribus nisi corrupti nam fugit in eius dolorum harum quam repudiandae,
-            ullam tenetur saepe possimus nulla!</p>
-        </div>
+  <div class="porfolio" id="portfolio" style="background-color: #A4D8D8;">
+    <div class="head" style="justify-content: center;">
+      <h2 style="text-align: center;padding-top: 50px;">My Works</h2>
+    </div>
+    <div class="designhead" style="justify-content: center;margin-top: 40px;">
+      <h3 style="text-align: center;">
+        Design Projects
+      </h3>
+      <p style="text-align: center;">
+        <br>
+        Here are some of my past projects. Click the button below to find more<br><br>
+        <button type="button" onclick="gotoport()"><b>Explore</b></button>
+      </p>
+    </div>
+    <div class="pdwrapper">
+      <div class="pdcontainer">
+        <input type="radio" name="slide" id="c1" checked>
+        <label for="c1" class="pdcard">
+          <div class="pdrow">
+            <div class="pdicon">1</div>
+            <div class="pddescription">
+              <h4>Chess Poster</h4>
+              <p>Photoshop and Illustrator</p>
+            </div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c2">
+        <label for="c2" class="pdcard">
+          <div class="pdrow">
+            <div class="pdicon">2</div>
+            <div class="pddescription">
+              <h4>Travel Magazine Page</h4>
+              <p>Photoshop and Illustrator</p>
+            </div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c3">
+        <label for="c3" class="pdcard">
+          <div class="pdrow">
+            <div class="pdicon">3</div>
+            <div class="pddescription">
+              <h4>Music Festival Poster</h4>
+              <p>Photoshop</p>
+            </div>
+          </div>
+        </label>
+        <input type="radio" name="slide" id="c4">
+        <label for="c4" class="pdcard">
+          <div class="pdrow">
+            <div class="pdicon">4</div>
+            <div class="pddescription">
+              <h4>Name Card Design</h4>
+              <p>Illustrator</p>
+            </div>
+          </div>
+        </label>
       </div>
     </div>
-  </div>
 
+
+<!-- 
 
   <main id="contact">
     <div class="black-bar"></div>
     <section class="contact">
       <div class="container">
-        
+
         <div class="left">
           <div class="form-wrapper">
             <div class="contact-heading">
@@ -162,17 +182,14 @@
         </div>
       </div>
     </section>
-  </main>
+  </main> -->
 
 
   <footer>
     <div class="rows">
       <div class="col3">
-        <img src="Images/" class="footerlogo">
-        <p>bruh yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap
-          yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap
-          yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap yap
-          yap yap</p>
+        <img src="" class="footerlogo">
+        <p></p>
       </div>
       <div class="col3">
         <h3>Contact Me <div class="underline"><span></span></div>
@@ -205,9 +222,39 @@
     <p class="copyright">©</p>
   </footer>
 
+  <cursor>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </cursor>
+
 
   <script src="app.js"></script>
   <script src="script.js"></script>
+  <script src="cursor.js"></script>
+  <script>
+
+    function gotoport() {
+      window.location.href = "portfolio.html"
+    }
+  </script>
 
 </body>
 
